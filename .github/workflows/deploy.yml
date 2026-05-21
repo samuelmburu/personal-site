@@ -37,7 +37,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || 'https://samuelmburu.github.io' }}
+          PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || 'https://samuel-kimama.github.io' }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

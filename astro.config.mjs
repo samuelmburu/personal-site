@@ -8,7 +8,7 @@ const customDomain = existsSync("./public/CNAME")
   : "";
 
 const site = process.env.PUBLIC_SITE_URL
-  || (customDomain ? `https://${customDomain}` : "https://samuelmburu.github.io");
+  || (customDomain ? `https://${customDomain}` : "https://samuel-kimama.github.io");
 const isCI = process.env.CI === "true";
 
 export default defineConfig({

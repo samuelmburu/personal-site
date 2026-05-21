@@ -476,6 +476,13 @@ p {
   text-align: right;
 }
 
+.site-version {
+  font-family: monospace;
+  font-size: .7em;
+  opacity: 0.5;
+  margin-left: 0.5ch;
+}
+
 .project-meta,
 .timeline-meta {
   display: flex;

@@ -4,6 +4,7 @@ import { Icon } from "astro-icon/components";
 import "../styles/global.css";
 import { getResumeData } from "../data/resume";
 import { siteContent } from "../data/site";
+import { version } from "../../package.json";
 
 interface Props {
   title: string;
@@ -84,7 +85,10 @@ const navItems = [
       </div>
     </main>
     <footer class="shell site-footer">
-       <p class="muted text-sm text-right">Built with Astro &copy; {new Date().getFullYear()}</p>
+      <p class="muted text-sm text-right">
+        Built with Astro &copy; {new Date().getFullYear()}
+        <span class="site-version">v{version}</span>
+      </p>
     </footer>
     <script is:inline>
       (() => {

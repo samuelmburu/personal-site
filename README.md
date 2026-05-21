@@ -36,12 +36,12 @@ This repo uses [Conventional Commits](https://www.conventionalcommits.org/) and 
 
 ### Commit types and version bumps
 
-| Commit prefix | Version bump | Example |
+| Commit prefix | Version bump | Release PR? |
 |---|---|---|
-| `fix:` | patch (0.0.x) | `fix: correct resume download link` |
-| `feat:` | minor (0.x.0) | `feat: add dark mode toggle` |
-| `feat!:` or `BREAKING CHANGE:` | major (x.0.0) | `feat!: redesign layout` |
-| `build:`, `chore:`, `docs:`, `style:`, `refactor:` | none | no release PR created |
+| `feat:` | minor (0.x.0) | yes |
+| `feat!:` / `BREAKING CHANGE:` | major (x.0.0) | yes |
+| `fix:`, `perf:`, `refactor:`, `docs:`, `style:`, `test:` | patch (0.0.x) | yes |
+| `build:`, `chore:` | none | no |
 
 ### Release flow
 

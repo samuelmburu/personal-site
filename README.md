@@ -30,6 +30,28 @@ Set your production URL in `.env` for local parity:
 PUBLIC_SITE_URL=https://your-domain.com
 ```
 
+## Versioning and releases
+
+This repo uses [Conventional Commits](https://www.conventionalcommits.org/) and [release-please](https://github.com/googleapis/release-please) for automated semantic versioning.
+
+### Commit types and version bumps
+
+| Commit prefix | Version bump | Example |
+|---|---|---|
+| `fix:` | patch (0.0.x) | `fix: correct resume download link` |
+| `feat:` | minor (0.x.0) | `feat: add dark mode toggle` |
+| `feat!:` or `BREAKING CHANGE:` | major (x.0.0) | `feat!: redesign layout` |
+| `build:`, `chore:`, `docs:`, `style:`, `refactor:` | none | no release PR created |
+
+### Release flow
+
+1. Commit to `main` using conventional commit messages.
+2. The `release-please` workflow automatically opens or updates a **Release PR** that bumps the version in `package.json`, updates `CHANGELOG.md`, and lists all changes since the last release.
+3. Merge the Release PR when ready to cut a release — this creates a GitHub Release and a version tag (e.g. `v1.2.0`).
+4. The deploy workflow picks up the merge and publishes the site.
+
+The site deploys on every push to `main`, not only on releases. Releases exist to track a versioned history of significant changes.
+
 ## Deploy to GitHub Pages
 
 This configuration assumes the published repository is the user-site repository:
